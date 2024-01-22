@@ -1,0 +1,453 @@
+/*
+ Theme Name:  Fleurs d'orangers et chats errants - Oscars Short
+ Theme URI: https://www.koukaki.local
+ Author: Studio Koukaki
+ Author URI: https://www.koukaki.local
+ Template: foce
+ Description: Thème enfant à l'occasion de la nomination aux Oscars Shorts
+ Version: 0.1
+ */
+
+// Ajoutez ces styles à votre fichier CSS
+
+.video-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    animation: fadeInDownLogo 2s ease-out forwards, float 3s ease-in-out infinite;
+}
+
+@keyframes fadeInDownLogo {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -150%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) translateY(-20px);
+    }
+}
+
+/* Fleur qui tourne */
+.story__article::after,
+.story h2::after,
+#studio h2::after,
+#studio h2::before,
+.site-footer::before,
+.site-footer::after,
+.site-footer ul::after {
+    animation: rotate 20s linear infinite;
+}
+
+/* animation des fleurs */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* animation titre */
+.animation-title {
+    position: relative;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animation-title {
+    animation-name: titleAnimation;
+}
+
+@keyframes titleAnimation {
+    0% {
+        top: 30px;
+    }
+
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    // Augmenter la durée de la transition
+}
+
+.fade-in-section.in-view {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.swiper-slide figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles pour les nuages */
+.cloud {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.big-cloud {
+    background-image: url("assets/images/big_cloud.png");
+    filter: blur(10.5px);
+    top: 10%;
+    left: 50%;
+    width: 316px;
+    height: 114px;
+    z-index: 2;
+}
+
+.little-cloud {
+    background-image: url("assets/images/little_cloud.png");
+    filter: blur(6.5px);
+    left: 37%;
+    top: 39%;
+    width: 100px;
+    height: 30px;
+    z-index: 2;
+}
+
+#place {
+    background-image: url('assets/images/Studio_Koukaki-image_place.png') !important;
+}
+
+.nav-menu {
+    width: 50%;
+}
+
+.nav-menu .site-title {
+    position: absolute;
+    left: 40%;
+    top: 26px;
+}
+
+#site-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    top: 26px;
+    right: 8%;
+}
+
+.main-navigation .line {
+    display: block;
+    position: relative;
+    width: 35px;
+    height: 1px;
+    margin-bottom: 5px;
+    z-index: 1;
+    transform-origin: 1px 0px !important;
+    transition: transform 0.8s, opacity 0.2s ease;
+}
+
+.main-navigation .line:first-child {
+    transform-origin: 0% 0% !important;
+}
+
+.main-navigation .line:nth-last-child(2) {
+    transform-origin: 0% 100% !important;
+}
+
+.main-navigation.toggled .line {
+    transform: rotate(-45deg) translateY(1px) translateX(-2px);
+    opacity: 1;
+}
+
+.main-navigation.toggled .line:nth-last-child(2) {
+    transform: rotate(0deg) scale(0.2, 0.2);
+    opacity: 0;
+}
+
+.main-navigation.toggled .line:nth-last-child(3) {
+    transform: rotate(45deg) translate(-6px, -9px);
+}
+
+#menu {
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 101vh;
+    padding-top: 180px;
+    margin-top: 767px;
+    transform-origin: 0% 0% !important;
+    transform: translate(0%, -150%);
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    opacity: 0;
+    background: #FFF5E9;
+    overflow: hidden;
+}
+
+#menu ul {
+    flex-direction: column;
+}
+
+#menu ul li {
+    font-size: 44px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#menu ul li a:hover {
+    text-shadow: 0px 0px 14px #FF5C00;
+    color: black;
+}
+
+.menu-display {
+    display: none;
+}
+
+.main-navigation.toggled #menu {
+    transform: none;
+    opacity: 1;
+}
+
+.image-menu {
+    position: absolute;
+}
+
+.logo-menu {
+    width: 154px;
+    left: 45%;
+    top: 50px;
+    filter: drop-shadow(0px 0px 26.094px rgba(255, 92, 0, 0.6));
+}
+
+.menu-footer {
+    left: 45%;
+    bottom: 100px;
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.flower-menu-random {
+    width: 60px;
+    top: 325px;
+    left: 1402px;
+    animation: rotateAnimation 20s linear infinite;
+}
+
+.flower-menu-random2 {
+    width: 55px;
+    top: 363px;
+    left: 213px;
+    animation: rotateAnimation 20s linear infinite;
+}
+
+.flower-menu-orchid {
+    width: 173px;
+    top: 70px;
+    left: -7%;
+    animation: rotateAnimation 20s linear infinite;
+}
+
+.flower-menu-sunflower {
+    top: 90px;
+    right: 10%;
+    animation: rotateAnimation 20s linear infinite;
+}
+
+.flower-menu-hibiscus {
+    width: 500px;
+    top: 430px;
+    right: -20%;
+    animation: rotateAnimation 20s linear infinite;
+}
+
+@keyframes floatVertical {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.cat-menu-orenjiiro {
+    top: 425px;
+    left: 79px;
+    height: 70px;
+    animation: floatVertical 2s ease-in-out infinite;
+}
+
+.cat-menu-jaakuna {
+    top: 300px;
+    right: 25%;
+    height: 15%;
+    animation: floatVertical 2s ease-in-out infinite;
+}
+
+.cat-menu-kawaneko {
+    top: 160px;
+    left: 30%;
+    height: 70px;
+    animation: floatVertical 2s ease-in-out infinite;
+}
+
+.orange-background {
+    background-image: url('assets/images/Rectangle.png');
+    margin-right: 60%;
+    margin-top: 100px;
+}
+
+/*** section nomination**/
+
+.oscar-section {
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+}
+
+.titre-oscar {
+    background-image: url('assets/images/orange_oscars_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 700px;
+    height: 250px;
+    padding: 50px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    color: #fff5e9;
+    font-size: 40px;
+    letter-spacing: -1px;
+    margin-bottom: 8em;
+    text-shadow: grey 1px 0 10px;
+}
+
+.logo-oscar {
+    max-width: 275px;
+}
+
+/**** FOOTER ****/
+
+.site-footer {
+    flex-direction: column;
+    padding-top: 12em;
+}
+
+.site-footer::after {
+    bottom: 42em;
+}
+
+.site-footer::before {
+    top: 4em;
+}
+
+/* titre oscar */
+@media (max-width: 1000px) {
+    .titre-oscar {
+        width: 100%;
+        padding: 20px;
+        font-size: 24px;
+        letter-spacing: 0;
+        margin-bottom: 2em;
+        text-shadow: none;
+        background: none;
+        color: orange;
+        margin-bottom: 200px;
+    }
+}
+
+/* fleur footer */
+@media (max-width: 1000px) {
+
+    .site-footer::before,
+    .site-footer::after {
+        display: none;
+    }
+}
+
+/* image oscar */
+@media (max-width: 600px) {
+    .logo-oscar {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    /* Responsive MENU */
+    /* barre du menu */
+    .main-navigation {
+        height: 70px !important;
+    }
+
+    /* Responsive MENU */
+    /* animation du menu */
+    .flower-menu-sunflower,
+    .cat-menu-jaakuna,
+    .cat-menu-kawaneko,
+    .cat-menu-orenjiiro,
+    .flower-menu-random2,
+    .flower-menu-orchid {
+        display: none;
+    }
+}
+
+/* Orange background */
+@media (max-width: 1000px) {
+    .orange-background {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* supprime fleur titre histoire */
+@media (max-width: 1000px) {
+    #studio h2::before {
+        content: none;
+    }
+}

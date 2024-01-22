@@ -1,0 +1,20 @@
+[15-Dec-2023 15:31:13 UTC] PHP Fatal error:  Cannot redeclare theme_enqueue_styles() (previously declared in C:\Users\dylan\Local Sites\koukaki-studio2\app\public\wp-content\themes\foce-child\functions.php:4) in C:\Users\dylan\Local Sites\koukaki-studio2\app\public\wp-content\themes\foce-child\functions.php on line 23
+[29-Dec-2023 14:39:41 UTC] PHP Warning:  Undefined variable $characters_query in C:\Users\dylan\Local Sites\koukaki-studio2\app\public\wp-content\themes\foce-child\front-page.php on line 28
+[29-Dec-2023 14:39:41 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in C:\Users\dylan\Local Sites\koukaki-studio2\app\public\wp-content\themes\foce-child\front-page.php:28
+Stack trace:
+#0 C:\Users\dylan\Local Sites\koukaki-studio2\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\dylan\Local Sites\koukaki-studio2\app\public\wp-blog-header.php(19): require_once('C:\\Users\\dylan\\...')
+#2 C:\Users\dylan\Local Sites\koukaki-studio2\app\public\index.php(17): require('C:\\Users\\dylan\\...')
+#3 {main}
+  thrown in C:\Users\dylan\Local Sites\koukaki-studio2\app\public\wp-content\themes\foce-child\front-page.php on line 28
+[29-Dec-2023 16:26:47 UTC] PHP Warning:  Undefined variable $args in C:\Users\dylan\Local Sites\koukaki-studio2\app\public\wp-content\themes\foce-child\carousel.php on line 6
+[29-Dec-2023 16:28:30 UTC] PHP Warning:  Undefined variable $args in C:\Users\dylan\Local Sites\koukaki-studio2\app\public\wp-content\themes\foce-child\carousel.php on line 6
+[29-Dec-2023 16:30:06 UTC] PHP Warning:  Undefined variable $args in C:\Users\dylan\Local Sites\koukaki-studio2\app\public\wp-content\themes\foce-child\carousel.php on line 6
+[29-Dec-2023 16:30:58 UTC] PHP Warning:  Undefined variable $args in C:\Users\dylan\Local Sites\koukaki-studio2\app\public\wp-content\themes\foce-child\carousel.php on line 6
+[29-Dec-2023 16:32:03 UTC] PHP Warning:  Undefined variable $args in C:\Users\dylan\Local Sites\koukaki-studio2\app\public\wp-content\themes\foce-child\carousel.php on line 6
+[29-Dec-2023 16:33:17 UTC] PHP Warning:  Undefined variable $args in C:\Users\dylan\Local Sites\koukaki-studio2\app\public\wp-content\themes\foce-child\carousel.php on line 6
+[29-Dec-2023 16:33:37 UTC] PHP Warning:  Undefined variable $args in C:\Users\dylan\Local Sites\koukaki-studio2\app\public\wp-content\themes\foce-child\carousel.php on line 6
+[29-Dec-2023 16:35:31 UTC] PHP Warning:  Undefined variable $args in C:\Users\dylan\Local Sites\koukaki-studio2\app\public\wp-content\themes\foce-child\carousel.php on line 6
+[29-Dec-2023 16:36:59 UTC] PHP Warning:  Undefined variable $args in C:\Users\dylan\Local Sites\koukaki-studio2\app\public\wp-content\themes\foce-child\carousel.php on line 6
+[29-Dec-2023 16:37:24 UTC] PHP Warning:  Undefined variable $args in C:\Users\dylan\Local Sites\koukaki-studio2\app\public\wp-content\themes\foce-child\carousel.php on line 6
+[29-Dec-2023 16:37:43 UTC] PHP Warning:  Undefined variable $args in C:\Users\dylan\Local Sites\koukaki-studio2\app\public\wp-content\themes\foce-child\carousel.php on line 6
